@@ -8,9 +8,10 @@
 - [x] Services
 - [x] Modules
 
-:smiley: Nomore Dependency Errors :smiley:
+Nomore Dependency Errors :smirk:
 
-To install the repo, you need to find the zipfile: 
+To install the repo, you need to find the zipfile:
+
 :arrow_right: [here](http://start.uncoded.life)
 
  **CONTACT _ME_:**
