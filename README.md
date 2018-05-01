@@ -8,7 +8,7 @@
 - [x] Services
 - [x] Modules
 
-(- [x] Nomore Dependency Errors)
+- [x] Dependency errors covered
 
 The zipfile frome the repository can be found [here](http://start.uncoded.life)
 
