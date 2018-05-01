@@ -1,6 +1,4 @@
-# repository.UNCODED.prime
-
-UNCODED Prime:
+UNCODED PRIME:
 
 * Repositories
 * Add-ons
@@ -8,8 +6,8 @@ UNCODED Prime:
 * Modules
 (Everything included in here, this will prevent dependency errors)
 
-[COLOR tan]CONTACT[/COLOR] [COLOR white]ME[/COLOR]:
+CONTACT ME:
 
-admin@uncoded.life
+* admin@uncoded.life
 
 
