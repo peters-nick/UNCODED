@@ -1,5 +1,5 @@
 # UNCODED - Life Unraveled
-> "If we accept or limits, we go beyond"
+> "Once we accept or limits, we go beyond"
 
 **UNCODED _PRIME:_**
 
