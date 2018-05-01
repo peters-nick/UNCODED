@@ -12,12 +12,12 @@ Nomore Dependency Errors :smirk:
 
 **REPOSITORY _ZIP_ :**
 
-:arrow_forward: [repository.UNCODED.prime](http://start.uncoded.life)
-
-
+* [repository.UNCODED.prime](http://start.uncoded.life)
 
  **CONTACT _ME_ :**
 
 * admin@uncoded.life
+
+
 
 
