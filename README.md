@@ -1,12 +1,12 @@
 # UNCODED - Life Unraveled
-> "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."
+> "I am thankful for all of those who said NO to me. Its because of them I’m doing it myself."
 
 # **UNCODED's** _PRIME_ Repository:
 
-* Repositories
-* Add-ons
-* Services
-* Modules
+- [x] Repositories
+- [x] Add-ons
+- [x] Services
+- [x] Modules
 (Everything included in here, this will prevent dependency errors)
 
 The zipfile frome the repository can be found [here](http://start.uncoded.life)
