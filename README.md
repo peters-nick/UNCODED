@@ -1,4 +1,4 @@
-UNCODED PRIME:
+**UNCODED PRIME:**
 
 * Repositories
 * Add-ons
@@ -6,7 +6,7 @@ UNCODED PRIME:
 * Modules
 (Everything included in here, this will prevent dependency errors)
 
-CONTACT ME:
+**CONTACT ME:**
 
 * admin@uncoded.life
 
