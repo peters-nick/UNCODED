@@ -8,9 +8,10 @@
 - [x] Services
 - [x] Modules
 
-- [x] Dependency errors covered
+:smiley: Nomore Dependency Errors :smiley:
 
-The zipfile frome the repository can be found [here](http://start.uncoded.life)
+To install the repo, you need to find the zipfile: 
+:arrow_right: [here](http://start.uncoded.life)
 
  **CONTACT _ME_:**
 
