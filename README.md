@@ -1,5 +1,5 @@
 # UNCODED - Life Unraveled
-> "Once we accept or limits, we go beyond"
+> "Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."
 
 # **UNCODED's** _PRIME_ Repository:
 
