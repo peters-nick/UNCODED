@@ -1,7 +1,7 @@
 # UNCODED - Life Unraveled
 > "Once we accept or limits, we go beyond"
 
-# **repository.UNCODED.prime**:
+# **UNCODED's _PRIME_ Repository:**
 
 * Repositories
 * Add-ons
