@@ -14,6 +14,8 @@ Nomore Dependency Errors :smirk:
 
 * [repository.UNCODED.prime](http://start.uncoded.life)
 
+https://gitter.im/repository-UNCODED-prime/Lobby
+
  **CONTACT _ME_ :**
 
 * admin@uncoded.life
