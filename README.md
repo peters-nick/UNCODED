@@ -1,3 +1,6 @@
+# UNCODED - Life Unraveled
+> "If we accept or limits, we go beyond"
+
 **UNCODED _PRIME:_**
 
 * Repositories
