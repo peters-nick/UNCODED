@@ -7,7 +7,8 @@
 - [x] Add-ons
 - [x] Services
 - [x] Modules
-(Everything included in here, this will prevent dependency errors)
+
+(- [x] Nomore Dependency Errors)
 
 The zipfile frome the repository can be found [here](http://start.uncoded.life)
 
