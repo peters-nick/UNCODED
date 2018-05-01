@@ -14,9 +14,6 @@ Nomore Dependency Errors :smirk:
 
 * [repository.UNCODED.prime](http://start.uncoded.life)
 
-![1363000](https://img.shields.io/github/repo-size/badges/shields.svg?style=for-the-badge)
-
-
 [![Join the chat at https://gitter.im/repository-UNCODED-prime/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/repository-UNCODED-prime/Lobby)
 
 
