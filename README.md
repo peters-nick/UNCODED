@@ -1,7 +1,7 @@
 # UNCODED - Life Unraveled
 > "Once we accept or limits, we go beyond"
 
-# **UNCODED's _PRIME_ Repository:**
+# **UNCODED's** _PRIME_ Repository:
 
 * Repositories
 * Add-ons
@@ -9,7 +9,9 @@
 * Modules
 (Everything included in here, this will prevent dependency errors)
 
-# **Contact _me:_**
+The zipfile frome the repository can be found [here](http://start.uncoded.life)
+
+# **CONTACT** _ME_:
 
 * admin@uncoded.life
 
