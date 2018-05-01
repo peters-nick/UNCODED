@@ -9,7 +9,7 @@
 * Modules
 (Everything included in here, this will prevent dependency errors)
 
-# **CONTACT _ME:_**
+# **Contact _me:_**
 
 * admin@uncoded.life
 
