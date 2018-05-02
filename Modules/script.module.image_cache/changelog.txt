@@ -1,0 +1,26 @@
+[B]Version 0.0.8[/B]
+- Fix zip and db folder location
+
+[B]Version 0.0.7[/B]
+- Download cache db at runtime
+- Add tknorris.shared as dependency
+
+[B]Version 0.0.6[/B]
+- allow access from different threads
+- Update cache
+
+[B]Version 0.0.5[/B]
+- Update cache
+
+[B]Version 0.0.4[/B]
+- Update cache
+
+[B]Version 0.0.3[/B]
+- Fix objects that have duplicate TMDB IDs
+
+[B]Version 0.0.2[/B]
+- IDL Completed
+- Remove CM (broken on 2.6)
+
+[B]Version 0.0.1[/B]
+- Initial Release.
