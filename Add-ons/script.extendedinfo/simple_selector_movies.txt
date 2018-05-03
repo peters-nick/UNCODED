@@ -1,0 +1,6 @@
+plugin.video.filmnet|direct.filmnet.o
+plugin.video.bob.unleashed|direct.bob.unleashed.m
+plugin.video.elysium|direct.elysium.q
+plugin.video.neptune|direct.neptune.og
+plugin.video.streamhub|direct.streamhub.q
+plugin.video.ukturk|navigate.ukturk.q
