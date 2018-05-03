@@ -13,7 +13,7 @@ class Main:
 
     def __init__(self):
         xbmc.log("version %s started" % ADDON_VERSION)
-        xbmc.executebuiltin('SetProperty(extendedinfo_running,True,home)')
+        xbmc.executebuiltin('SetProperty(UNCODED.extrainfo_running,True,home)')
         if xbmc.getCondVisibility('Skin.String(WindowColorMain,'+COLORMAIN+')') == False: xbmc.executebuiltin('Skin.SetString(WindowColorMain,'+COLORMAIN+')')
         elif xbmc.getCondVisibility('Skin.String(WindowColorThemed,'+COLORTHEMED+')') == False: xbmc.executebuiltin('Skin.SetString(WindowColorThemed,'+COLORTHEMED+')')
         self._parse_argv()
@@ -24,7 +24,7 @@ class Main:
             from resources.lib.WindowManager import wm
             wm.open_video_list()
             HOME.clearProperty('infodialogs.active')
-        xbmc.executebuiltin('ClearProperty(extendedinfo_running,home)')
+        xbmc.executebuiltin('ClearProperty(UNCODED.extrainfo_running,home)')
 
     def _parse_argv(self):
         self.handle = None
@@ -32,7 +32,7 @@ class Main:
         self.params = {"handle": None,
                        "control": None}
         for arg in sys.argv:
-            if arg == 'script.extendedinfo':
+            if arg == 'script.UNCODED.extrainfo':
                 continue
             param = arg.replace('"', '').replace("'", " ")
             if param.startswith('info='):

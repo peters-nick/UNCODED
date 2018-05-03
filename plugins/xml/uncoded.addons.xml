@@ -552,7 +552,7 @@
 <addon
 	id="script.UNCODED.extrainfo"
 	name="  [B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Extra Info[/COLOR][/I][/B]"
-	version="6.0.0~Beta2"
+	version="6.0.0~Beta3"
 	provider-name="UNCODED">
   <requires>
     <import addon="xbmc.python"                     version="2.19.0"/>
@@ -857,7 +857,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 <addon
 	id="video.UNCODED.meta"
 	name="  [B][COLOR tan]UNCODED[/COLOR] [I]Meta[/I][/B]"
-	version="2.0.0~Beta1"
+	version="2.0.0~Beta2"
 	provider-name="UNCODED">
 
 	<requires>
@@ -893,7 +893,7 @@ Other languages with a great number of subtitles are: Danish, French, Swedish, D
 				</item>
 				<item library="context_playable.py">
 					<label>$ADDON[video.UNCODED.meta 30622]</label>
-					<visible>!System.HasAddon(context.metalliq) + !Skin.HasSetting(Contexting)</visible>
+					<visible>!System.HasAddon(context.UNCODED.meta) + !Skin.HasSetting(Contexting)</visible>
 				</item>
 			</menu>
 		</menu>

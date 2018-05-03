@@ -213,11 +213,11 @@ def future(seconds):
 def main():
     go_idle(15)
     if plugin.get_setting(SETTING_TOTAL_SETUP_DONE, bool) == False:
-        xbmc.executebuiltin('RunPlugin(plugin://plugin.video.metalliq/setup/total)')
+        xbmc.executebuiltin('RunPlugin(plugin://video.UNCODED.meta/setup/total)')
         plugin.set_setting(SETTING_TOTAL_SETUP_DONE, "true")
     if plugin.get_setting(SETTING_AUTOPATCH, bool) == True:
         patch("auto")
-    xbmc.executebuiltin("RunPlugin(plugin://plugin.video.metalliq/movies/batch_add_to_library)")
+    xbmc.executebuiltin("RunPlugin(plugin://video.UNCODED.meta/movies/batch_add_to_library)")
     next_update = future(0)
     while not xbmc.abortRequested:
         if next_update <= future(0):

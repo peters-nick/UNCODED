@@ -3,7 +3,7 @@
 import urllib
 import xbmc
 
-pluginid = "plugin.video.metalliq"
+pluginid = "video.UNCODED.meta"
 
 def main():
     path = xbmc.getInfoLabel('ListItem.Path')

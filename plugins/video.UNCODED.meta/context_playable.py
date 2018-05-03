@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'resources', 'lib'))
 
 import xbmc, xbmcvfs
 import re
-pluginid = "plugin.video.metalliq"
+pluginid = "video.UNCODED.meta"
 
 def get_url(stream_file):
     if stream_file.endswith(".strm"):

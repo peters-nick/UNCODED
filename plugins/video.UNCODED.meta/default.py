@@ -38,7 +38,7 @@ from audiodb import audiodb
 FORCE = plugin.get_setting(SETTING_FORCE_VIEW, bool)
 VIEW  = plugin.get_setting(SETTING_MAIN_VIEW, int)
 
-addonid = 'plugin.video.metalliq'
+addonid = 'video.UNCODED.meta'
 
 @plugin.route('/')
 def root():
@@ -183,7 +183,10 @@ def manage_library_players(type):
                         plugin.log.info("QQQQQ lib_file = {0}".format(lib_file))
                         with open(lib_file, "w") as lf:
                             lf.write(new)
-            dialogs.notify(msg=_("Done"), title=_("Manage...").replace(".", ""), delay=5000, image=get_icon_path("metalliq"))
+            dialogs.notify(msg=_("Done"), title=_("Manage...").replace(".", ""), delay=5000, image=get_icon_path("UNCODED.extrainfo
+
+
+       ))
 
 @plugin.route('/manage/tv/players')
 def manage_tv_players():
@@ -203,7 +206,8 @@ def clear_cache():
                 shutil.rmtree(file_path)
         except Exception, e:
             traceback.print_exc()
-    dialogs.notify(msg='Cache', title='Deleted', delay=5000, image=get_icon_path("metalliq"))
+    dialogs.notify(msg='Cache', title='Deleted', delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
 
 @plugin.route('/update_library')
 def update_library():
@@ -349,7 +353,7 @@ def settings_set_channelers():
                 plugin.set_setting(SETTING_LIVE_ENABLED_CHANNELERS, selected)
             else:
                 raise Exception("invalid parameter %s" % media)
-    print "MetalliQ Guidance: Movie, TV and Live players enabled"
+    print "UNCODED.extrainfo Guidance: Movie, TV and Live players enabled"
     return True
 
 @plugin.route('/settings/default_channeler/<media>')
@@ -446,14 +450,17 @@ def update_players(url = None):
 
 @plugin.route('/setup/total')
 def total_setup():
-    dialogs.notify(msg='Total Setup', title=_("Start"), delay=1000, image=get_icon_path("metalliq"))
+    dialogs.notify(msg='Total Setup', title=_("Start"), delay=1000, image=get_icon_path("UNCODED.extrainfo
+ ))
     if sources_setup() == True: pass
     if players_setup() == True: pass
-    dialogs.notify(msg='Total Setup', title=_("Done"), delay=5000, image=get_icon_path("metalliq"))
+    dialogs.notify(msg='Total Setup', title=_("Done"), delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
 
 @plugin.route('/setup/silent')
 def silent_setup():
-    xbmc.executebuiltin('SetProperty(running,totalmetalliq,home)')
+    xbmc.executebuiltin('SetProperty(running,totalUNCODED.extrainfo
+ home)')
     movielibraryfolder = plugin.get_setting(SETTING_MOVIES_LIBRARY_FOLDER, unicode)
     try: meta.library.movies.auto_movie_setup(movielibraryfolder)
     except: pass
@@ -470,11 +477,12 @@ def silent_setup():
 
 @plugin.route('/setup/players')
 def players_setup():
-    set_property("running","totalmetalliq")
+    set_property("running","totalUNCODED.extrainfo
+ )
     url = "http://cellardoortv.com/players/"
     if updater.update_players(url): dialogs.notify(msg=_('Player'), title=_('Updated for %s') % _('Player'), delay=1000, image=get_icon_path("player"))
     else: dialogs.notify(msg=_('Player'), title=_('Failed for %s') % _('Player'), delay=1000, image=get_icon_path("player"))
-    xbmc.executebuiltin("RunPlugin(plugin://plugin.video.metalliq/settings/players/all/)")
+    xbmc.executebuiltin("RunPlugin(plugin://video.UNCODED.meta/settings/players/all/)")
     clear_property("running")
     return True
 
@@ -597,14 +605,18 @@ def root_search_term(term):
 
 @plugin.route('/toggle/preferred_toggle')
 def toggle_preferred_toggle():
-    if xbmc.getCondVisibility("Skin.HasSetting(Toggling)") != True: dialogs.notify(msg="Toggling", title="Switched on", delay=5000, image=get_icon_path("metalliq"))
-    else: dialogs.notify(msg="Toggling", title="Switched off", delay=5000, image=get_icon_path("metalliq"))
+    if xbmc.getCondVisibility("Skin.HasSetting(Toggling)") != True: dialogs.notify(msg="Toggling", title="Switched on", delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
+    else: dialogs.notify(msg="Toggling", title="Switched off", delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
     xbmc.executebuiltin("Skin.ToggleSetting(Toggling)")
 
 @plugin.route('/toggle/context_player')
 def toggle_context_player():
-    if xbmc.getCondVisibility("Skin.HasSetting(Contexting)") != True: dialogs.notify(msg="Context player", title="Switched off", delay=5000, image=get_icon_path("metalliq"))
-    else: dialogs.notify(msg="Context player", title="Switched on", delay=5000, image=get_icon_path("metalliq"))
+    if xbmc.getCondVisibility("Skin.HasSetting(Contexting)") != True: dialogs.notify(msg="Context player", title="Switched off", delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
+    else: dialogs.notify(msg="Context player", title="Switched on", delay=5000, image=get_icon_path("UNCODED.extrainfo
+ ))
     xbmc.executebuiltin("Skin.ToggleSetting(Contexting)")
 
 @plugin.route('/toggle/acceleration')
@@ -648,7 +660,10 @@ def toggle_between_skins():
     if alternate_skin == "":
         if primary_skin != "skin.confluence" and primary_skin != "": plugin.set_setting(SETTING_ALTERNATE_SKIN, "skin.confluence")
         else:
-            dialogs.notify(msg="Alternate skin", title="Not set", delay=5000, image=get_icon_path("metalliq"))
+            dialogs.notify(msg="Alternate skin", title="Not set", delay=5000, image=get_icon_path("UNCODED.extrainfo
+
+
+       ))
             return openSettings(addonid, 5.7)
     if primary_skin != alternate_skin and primary_skin != "" and alternate_skin != "" and xbmc.getCondVisibility('System.HasAddon(%s)' % primary_skin) and xbmc.getCondVisibility('System.HasAddon(%s)' % alternate_skin):
         if current_skin != primary_skin:
@@ -681,7 +696,7 @@ def export_movies_library():
     if len(movies) < 1: return dialogs.notify(msg='Movies folder', title='Empty', delay=5000, image=get_icon_path("movies"))
     else :
         for movie in movies: ids = ids + str(movie) + '\n'
-    movies_backup_file_path = "special://profile/addon_data/plugin.video.metalliq/movies_to_add.bak"
+    movies_backup_file_path = "special://profile/addon_data/video.UNCODED.meta/movies_to_add.bak"
     if xbmcvfs.exists(movies_backup_file_path): os.remove(xbmc.translatePath(movies_backup_file_path))
     if not xbmcvfs.exists(movies_backup_file_path):
         batch_add_file = xbmcvfs.File(movies_backup_file_path, 'w')
@@ -698,7 +713,7 @@ def export_tv_library():
     if len(shows) < 1: return dialogs.notify(msg='TVShows folder', title='Empty', delay=5000, image=get_icon_path("tv"))
     else :
         for show in shows: ids = ids + str(show) + '\n'
-    shows_backup_file_path = "special://profile/addon_data/plugin.video.metalliq/shows_to_add.bak"
+    shows_backup_file_path = "special://profile/addon_data/video.UNCODED.meta/shows_to_add.bak"
     if xbmcvfs.exists(shows_backup_file_path): os.remove(xbmc.translatePath(shows_backup_file_path))
     if not xbmcvfs.exists(shows_backup_file_path):
         batch_add_file = xbmcvfs.File(shows_backup_file_path, 'w')
@@ -710,9 +725,9 @@ def export_tv_library():
 def play_by_label(label):
     types = [_("Movies"), _("TV shows"), _("Channels")]
     selection = dialogs.select("{0} {1}".format(_("Choose"), _("Type").lower()), [item for item in types])
-    if selection   == 0: xbmc.executebuiltin("RunPlugin(plugin://plugin.video.metalliq/movies/play_by_name/{0}/en)".format(label))
-    elif selection == 1: xbmc.executebuiltin("RunPlugin(plugin://plugin.video.metalliq/tv/play_by_name_only/{0}/en)".format(label))
-    elif selection == 2: xbmc.executebuiltin("RunPlugin(plugin://plugin.video.metalliq/live/{0}/None/en/context)".format(label))
+    if selection   == 0: xbmc.executebuiltin("RunPlugin(plugin://video.UNCODED.meta/movies/play_by_name/{0}/en)".format(label))
+    elif selection == 1: xbmc.executebuiltin("RunPlugin(plugin://video.UNCODED.meta/tv/play_by_name_only/{0}/en)".format(label))
+    elif selection == 2: xbmc.executebuiltin("RunPlugin(plugin://video.UNCODED.meta/live/{0}/None/en/context)".format(label))
 
 @plugin.route('/cleartrakt')
 def clear_trakt():

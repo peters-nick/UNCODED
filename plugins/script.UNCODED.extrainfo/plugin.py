@@ -15,7 +15,7 @@ class Main:
 
     def __init__(self):
         xbmc.log("version %s started" % ADDON_VERSION)
-        xbmc.executebuiltin('SetProperty(extendedinfo_running,True,home)')
+        xbmc.executebuiltin('SetProperty(UNCODED.extrainfo_running,True,home)')
         if xbmc.getCondVisibility('Skin.String(WindowColorMain,'+COLORMAIN+')') == False: xbmc.executebuiltin('Skin.SetString(WindowColorMain,'+COLORMAIN+')')
         elif xbmc.getCondVisibility('Skin.String(WindowColorThemed,'+COLORTHEMED+')') == False: xbmc.executebuiltin('Skin.SetString(WindowColorThemed,'+COLORTHEMED+')')
         self._parse_argv()
@@ -69,9 +69,9 @@ class Main:
                 image_code = temp['value'][:2]
                 label = temp['value'][5:]
                 li = xbmcgui.ListItem(label, iconImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code), thumbnailImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code))
-                li.setProperty('fanart_image', "special://home/addons/script.extendedinfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
-                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.extendedinfo?info=%s&type=script' % key
-                else: url = 'plugin://script.extendedinfo?info=%s' % key
+                li.setProperty('fanart_image', "special://home/addons/script.UNCODED.extrainfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
+                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.UNCODED.extrainfo?info=%s&type=script' % key
+                else: url = 'plugin://script.UNCODED.extrainfo?info=%s' % key
                 xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=li, isFolder=True)
             for key, value in iter(sorted(tvshow_items.iteritems())):
                 temp = {}
@@ -79,9 +79,9 @@ class Main:
                 image_code = temp['value'][:2]
                 label = temp['value'][5:]
                 li = xbmcgui.ListItem(label, iconImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code), thumbnailImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code))
-                li.setProperty('fanart_image', "special://home/addons/script.extendedinfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
-                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.extendedinfo?info=%s&type=script' % key
-                else: url = 'plugin://script.extendedinfo?info=%s' % key
+                li.setProperty('fanart_image', "special://home/addons/script.UNCODED.extrainfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
+                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.UNCODED.extrainfo?info=%s&type=script' % key
+                else: url = 'plugin://script.UNCODED.extrainfo?info=%s' % key
                 xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=li, isFolder=True)
             for key, value in iter(sorted(youtube_items.iteritems())):
                 temp = {}
@@ -89,12 +89,12 @@ class Main:
                 image_code = temp['value'][:2]
                 label = temp['value'][5:]
                 li = xbmcgui.ListItem(label, iconImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code), thumbnailImage="%s/resources/skins/Default/media/%s.png" % (ADDON_PATH, image_code))
-                li.setProperty('fanart_image', "special://home/addons/script.extendedinfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
-                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.extendedinfo?info=%s&type=script' % key
-                else: url = 'plugin://script.extendedinfo?info=%s' % key
+                li.setProperty('fanart_image', "special://home/addons/script.UNCODED.extrainfo/resources/skins/Default/media/%s-fanart.jpg" % image_code)
+                if SCRIPT == "true" and "yt" not in value: url = 'plugin://script.UNCODED.extrainfo?info=%s&type=script' % key
+                else: url = 'plugin://script.UNCODED.extrainfo?info=%s' % key
                 xbmcplugin.addDirectoryItem(handle=self.handle, url=url, listitem=li, isFolder=True)
             xbmcplugin.endOfDirectory(self.handle)
-        xbmc.executebuiltin('ClearProperty(extendedinfo_running,home)')
+        xbmc.executebuiltin('ClearProperty(UNCODED.extrainfo_running,home)')
 
     def _parse_argv(self):
         args = sys.argv[2][1:]

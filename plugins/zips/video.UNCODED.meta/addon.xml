@@ -2,7 +2,7 @@
 <addon 
 	id="video.UNCODED.meta" 
 	name="  [B][COLOR tan]UNCODED[/COLOR] [I]Meta[/I][/B]" 
-	version="2.0.0~Beta1" 
+	version="2.0.0~Beta2" 
 	provider-name="UNCODED">
 
 	<requires>
@@ -38,7 +38,7 @@
 				</item>
 				<item library="context_playable.py">
 					<label>$ADDON[video.UNCODED.meta 30622]</label>
-					<visible>!System.HasAddon(context.metalliq) + !Skin.HasSetting(Contexting)</visible>
+					<visible>!System.HasAddon(context.UNCODED.meta) + !Skin.HasSetting(Contexting)</visible>
 				</item>
 			</menu>
 		</menu>

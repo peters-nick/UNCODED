@@ -1,44 +1,44 @@
-List of possible ExtendedInfo script calls.
+List of possible UNCODED.extrainfo script calls.
 All calls can also be done by using a plugin path.
 
 Example:
-<content>plugin://script.extendedinfo?info=discography&amp;artistname=INSERT_ARTIST_NAME_HERE</content>
+<content>plugin://script.UNCODED.extrainfo?info=discography&amp;artistname=INSERT_ARTIST_NAME_HERE</content>
 - keep Attention to the parameter separators: "&amp;" some places it may need to be "&"
 Make your own custom commands:
-- RunScript(script.extendedinfo,argument1=value1,argument2=value2)
-- RunPlugin(plugin://script.extendedinfo/?argument1=value1&argument2=value2)
-- ActivateWindow(Videos,plugin://script.extendedinfo/?argument1=value1&argument2=value2,return)
+- RunScript(script.UNCODED.extrainfo,argument1=value1,argument2=value2)
+- RunPlugin(plugin://script.UNCODED.extrainfo/?argument1=value1&argument2=value2)
+- ActivateWindow(Videos,plugin://script.UNCODED.extrainfo/?argument1=value1&argument2=value2,return)
 
 ### Custom (added by OpenELEQ)
 
-RunScript(script.extendedinfo,info=list,type=movie)     --> Starts script with movie-type
+RunScript(script.UNCODED.extrainfo,info=list,type=movie)     --> Starts script with movie-type
   - optional additional parameter: query=
     - set query to "qqqqq" to force keyboard
   - optional additional parameter: iquery=              --> Executes custom iSearch using movie-list (~/resources/extras/movie/favourites.xml)
     - set iquery to "qqqqq" to force keyboard
 
-RunScript(script.extendedinfo,info=list,type=tv)        --> Starts script with tv-type
+RunScript(script.UNCODED.extrainfo,info=list,type=tv)        --> Starts script with tv-type
   - optional additional parameter: query=
     - set query to "qqqqq" to force keyboard
   - optional additional parameter: iquery=              --> Executes custom iSearch using tv-list (~/resources/extras/tv/favourites.xml)
     - set iquery to "qqqqq" to force keyboard
 
-RunScript(script.extendedinfo,info=list,iquery=)        --> Executes custom iSearch using total list (~/resources/extras/total/favourites.xml)
+RunScript(script.UNCODED.extrainfo,info=list,iquery=)        --> Executes custom iSearch using total list (~/resources/extras/total/favourites.xml)
   - set iquery to "qqqqq" to force keyboard
 
-RunScript(script.extendedinfo,info=list,type=channel)   --> Starts youtube-browser with channel-type
+RunScript(script.UNCODED.extrainfo,info=list,type=channel)   --> Starts youtube-browser with channel-type
   - optional additional parameter: query=
 
-RunScript(script.extendedinfo,info=list,type=playlist)  --> Starts youtube-browser with playlist-type
+RunScript(script.UNCODED.extrainfo,info=list,type=playlist)  --> Starts youtube-browser with playlist-type
   - optional additional parameter: query=
 
-RunScript(script.extendedinfo,info=list,type=video)     --> Starts youtube-browser with video-type
+RunScript(script.UNCODED.extrainfo,info=list,type=video)     --> Starts youtube-browser with video-type
   - optional additional parameter: query=
 
-RunScript(script.extendedinfo,info=list,listid=)        --> Starts script using listid
+RunScript(script.UNCODED.extrainfo,info=list,listid=)        --> Starts script using listid
   - TMDb login required
 
-RunScript(script.extendedinfo,info=string)              --> Sets SkinString (TotalSearch) and refreshes container
+RunScript(script.UNCODED.extrainfo,info=string)              --> Sets SkinString (TotalSearch) and refreshes container
   - optional additional parameter: type=
     - if type=tv                                        --> Sets SkinString (ShowSearch) and refreshes container
     - if type=movie                                     --> Sets SkinString (MovieSearch) and refreshes container
@@ -46,26 +46,26 @@ RunScript(script.extendedinfo,info=string)              --> Sets SkinString (Tot
     - if type=youtube                                   --> Sets SkinString (YoutubeSearch) and refreshes container
 
 
-RunScript(script.extendedinfo,info=zmovies)             --> All Movies in Script GUI
+RunScript(script.UNCODED.extrainfo,info=zmovies)             --> All Movies in Script GUI
   - optional additional parameter: query=
 
 ### TheMovieDB Movie-Widget content:
 Any of the movie-lists mentioned below can also be opened in the script interface by adding type=script argument
 
-RunScript(script.extendedinfo,info=incinemas)           --> InCinemasMovies.%d
-RunScript(script.extendedinfo,info=upcoming)            --> UpcomingMovies.%d
-RunScript(script.extendedinfo,info=popularmovies)       --> PopularMovies.%d
-RunScript(script.extendedinfo,info=topratedmovies)      --> TopRatedMovies.%d
-RunScript(script.extendedinfo,info=similarmovies)       --> SimilarMovies.%d
+RunScript(script.UNCODED.extrainfo,info=incinemas)           --> InCinemasMovies.%d
+RunScript(script.UNCODED.extrainfo,info=upcoming)            --> UpcomingMovies.%d
+RunScript(script.UNCODED.extrainfo,info=popularmovies)       --> PopularMovies.%d
+RunScript(script.UNCODED.extrainfo,info=topratedmovies)      --> TopRatedMovies.%d
+RunScript(script.UNCODED.extrainfo,info=similarmovies)       --> SimilarMovies.%d
   - required additional parameters: dbid=
-RunScript(script.extendedinfo,info=set)                 --> MovieSetItems.%d
+RunScript(script.UNCODED.extrainfo,info=set)                 --> MovieSetItems.%d
 - fetches a list of movies from the same Set
   - required additional parameters: dbid=
-RunScript(script.extendedinfo,info=directormovies)      --> DirectorMovies.%d
+RunScript(script.UNCODED.extrainfo,info=directormovies)      --> DirectorMovies.%d
   - required additional parameters: director=
-RunScript(script.extendedinfo,info=writermovies)        --> WriterMovies.%d
+RunScript(script.UNCODED.extrainfo,info=writermovies)        --> WriterMovies.%d
   - required additional parameters: writer=
-RunScript(script.extendedinfo,info=studio)              --> StudioInfo.%d
+RunScript(script.UNCODED.extrainfo,info=studio)              --> StudioInfo.%d
 - fetches a list of movies from the same studio
   - required additional parameters: studio=
 
@@ -82,16 +82,16 @@ Available Art:
 - 'Fanart':      Movie Fanart
 - 'Poster':      Movie Poster
 
-RunScript(script.extendedinfo,info=ztvshows)            --> All TVShows in Script GUI
+RunScript(script.UNCODED.extrainfo,info=ztvshows)            --> All TVShows in Script GUI
   - optional additional parameter: query=
 
 ### TheMovieDB TVShow-Widget content:
 Any of the tvshow-lists mentioned below can also be opened in the script interface by adding type=script argument
 
-RunScript(script.extendedinfo,info=populartvshows)      --> PopularTVShows.%d
-RunScript(script.extendedinfo,info=topratedtvshows)     --> TopRatedTVShows.%d
-RunScript(script.extendedinfo,info=onairtvshows)        --> OnAirTVShows.%d
-RunScript(script.extendedinfo,info=airingtodaytvshows)  --> AiringTodayTVShows.%d
+RunScript(script.UNCODED.extrainfo,info=populartvshows)      --> PopularTVShows.%d
+RunScript(script.UNCODED.extrainfo,info=topratedtvshows)     --> TopRatedTVShows.%d
+RunScript(script.UNCODED.extrainfo,info=onairtvshows)        --> OnAirTVShows.%d
+RunScript(script.UNCODED.extrainfo,info=airingtodaytvshows)  --> AiringTodayTVShows.%d
 
 Available Properties:
 - 'Title':            TVShow Title
@@ -106,8 +106,8 @@ Available Art:
 - 'Fanart':      TVShow Fanart
 
 ### Trakt.tv
-RunScript(script.extendedinfo,info=trendingmovies)      --> TrendingMovies.%d
-RunScript(script.extendedinfo,info=similarmoviestrakt)  --> SimilarMovies.%d
+RunScript(script.UNCODED.extrainfo,info=trendingmovies)      --> TrendingMovies.%d
+RunScript(script.UNCODED.extrainfo,info=similarmoviestrakt)  --> SimilarMovies.%d
   - required additional parameters: dbid= (database id) or id= (imdb id)
 
 Available Properties:
@@ -126,8 +126,8 @@ Available Art:
 - 'Poster'
 - 'Fanart'
 
-RunScript(script.extendedinfo,info=trendingshows)         --> TrendingShows.%d
-RunScript(script.extendedinfo,info=similartvshowstrakt)   --> SimilarTVShows.%d
+RunScript(script.UNCODED.extrainfo,info=trendingshows)         --> TrendingShows.%d
+RunScript(script.UNCODED.extrainfo,info=similartvshowstrakt)   --> SimilarTVShows.%d
   - required additional parameters: dbid= (database id) or id= (tvdb id)
 
 Available Properties:
@@ -153,8 +153,8 @@ Available Art:
 - 'Banner':      TVShow Banner
 - 'Fanart':      TVShow Fanart
 
-RunScript(script.extendedinfo,info=airingshows)         --> AiringShows.%d
-RunScript(script.extendedinfo,info=premiereshows)       --> PremiereShows.%d
+RunScript(script.UNCODED.extrainfo,info=airingshows)         --> AiringShows.%d
+RunScript(script.UNCODED.extrainfo,info=premiereshows)       --> PremiereShows.%d
 
 Available Properties:
 - 'Title':         Episode Title
@@ -174,7 +174,7 @@ Available Art:
 
 
 ### TheAudioDB
-RunScript(script.extendedinfo,info=discography)         --> Discography.%d
+RunScript(script.UNCODED.extrainfo,info=discography)         --> Discography.%d
 - fetches the artist discography (Last.FM)
   - required additional parameters: artistname=
 
@@ -193,10 +193,10 @@ Available Properties:
 - 'year':            Album Release Year
 - 'Sales':           Album Sales
 
-RunScript(script.extendedinfo,info=mostlovedtracks)         --> MostLovedTracks.%d
+RunScript(script.UNCODED.extrainfo,info=mostlovedtracks)         --> MostLovedTracks.%d
 - fetches most loved tracks for the given artist (TheAudioDB)
   - required additional parameters: artistname=
-RunScript(script.extendedinfo,info=albuminfo)               --> TrackInfo.%d
+RunScript(script.UNCODED.extrainfo,info=albuminfo)               --> TrackInfo.%d
   - required additional parameters: id= ???
 
 Available Properties:
@@ -207,13 +207,13 @@ Available Properties:
 - 'Thumb':       Album Thumb
 - 'Path':        Link to Youtube Video
 
-RunScript(script.extendedinfo,info=artistdetails) ???
+RunScript(script.UNCODED.extrainfo,info=artistdetails) ???
 
 ### LastFM
-RunScript(script.extendedinfo,info=albumshouts)
+RunScript(script.UNCODED.extrainfo,info=albumshouts)
 - fetches twitter shouts for given album
   - required additional parameters: artistname=, albumname=
-RunScript(script.extendedinfo,info=artistshouts)
+RunScript(script.UNCODED.extrainfo,info=artistshouts)
 - fetches twitter shouts for given artist
   - required additional parameters: artistname=
 
@@ -221,9 +221,9 @@ RunScript(script.extendedinfo,info=artistshouts)
 - 'author':   Tweet Author
 - 'date':     Tweet Date
 
-RunScript(script.extendedinfo,info=topartists)
+RunScript(script.UNCODED.extrainfo,info=topartists)
 - fetches a lists of the most popular artists
-RunScript(script.extendedinfo,info=hypedartists)
+RunScript(script.UNCODED.extrainfo,info=hypedartists)
 
 Available Properties:
 - 'Title':        Artist Name
@@ -231,7 +231,7 @@ Available Properties:
 - 'Thumb':        Artist Thumb
 - 'Listeners':    actual Listeners
 
-RunScript(script.extendedinfo,info=nearevents)       --> NearEvents.%d
+RunScript(script.UNCODED.extrainfo,info=nearevents)       --> NearEvents.%d
   - optional parameters: lat=, lon=, location=, distance=, festivalsonly=, tag=
 
 Available Properties:
@@ -255,11 +255,11 @@ Available Properties:
 - 'venue_image':  Venue image
 
 ### YouTube
-RunScript(script.extendedinfo,info=youtubesearch)           --> YoutubeSearch.%d
+RunScript(script.UNCODED.extrainfo,info=youtubesearch)           --> YoutubeSearch.%d
   - required additional parameters: id=
-RunScript(script.extendedinfo,info=youtubeplaylist)         --> YoutubePlaylist.%d
+RunScript(script.UNCODED.extrainfo,info=youtubeplaylist)         --> YoutubePlaylist.%d
   - required additional parameters: id=
-RunScript(script.extendedinfo,info=youtubeusersearch)       --> YoutubeUserSearch.%d
+RunScript(script.UNCODED.extrainfo,info=youtubeusersearch)       --> YoutubeUserSearch.%d
   - required additional parameters: id=
 
 Available Properties:
@@ -269,12 +269,12 @@ Available Properties:
 - 'Date':         Video Upload Date
 
 ### Misc Images
-RunScript(script.extendedinfo,info=xkcd)                   --> XKCD.%d
+RunScript(script.UNCODED.extrainfo,info=xkcd)                   --> XKCD.%d
 - fetches a daily random list of XKCD webcomics
-RunScript(script.extendedinfo,info=cyanide)                --> CyanideHappiness.%d
+RunScript(script.UNCODED.extrainfo,info=cyanide)                --> CyanideHappiness.%d
 - fetches a daily random list of Cyanide & Happiness webcomics
-RunScript(script.extendedinfo,info=dailybabe)              --> DailyBabe.%d
-RunScript(script.extendedinfo,info=dailybabes)             --> DailyBabes.%d
+RunScript(script.UNCODED.extrainfo,info=dailybabe)              --> DailyBabe.%d
+RunScript(script.UNCODED.extrainfo,info=dailybabes)             --> DailyBabes.%d
 
 Available Properties:
 - 'Thumb':        Image
@@ -299,14 +299,14 @@ info=albuminfo ## todo
 
 ### ActorInfo / MovieInfo Dialogs (script.metadata.actors replacement)
 possible script call for Actor Info Dialog:
-RunScript(script.extendedinfo,info=extendedactorinfo,name=ACTORNAME)
-RunScript(script.extendedinfo,info=extendedactorinfo,id=ACTOR_TMDB_ID)
+RunScript(script.UNCODED.extrainfo,info=extendedactorinfo,name=ACTORNAME)
+RunScript(script.UNCODED.extrainfo,info=extendedactorinfo,id=ACTOR_TMDB_ID)
 
 possible script calls for Movie Info Dialog:
-RunScript(script.extendedinfo,info=extendedinfo,name=MOVIENAME)
-RunScript(script.extendedinfo,info=extendedinfo,id=MOVIE_TMDB_ID)
-RunScript(script.extendedinfo,info=extendedinfo,dbid=MOVIE_DBID)
-RunScript(script.extendedinfo,info=extendedinfo,imdb_id=IMDB_ID)
+RunScript(script.UNCODED.extrainfo,info=UNCODED.extrainfo,name=MOVIENAME)
+RunScript(script.UNCODED.extrainfo,info=UNCODED.extrainfo,id=MOVIE_TMDB_ID)
+RunScript(script.UNCODED.extrainfo,info=UNCODED.extrainfo,dbid=MOVIE_DBID)
+RunScript(script.UNCODED.extrainfo,info=UNCODED.extrainfo,imdb_id=IMDB_ID)
 
 ----
 
@@ -314,8 +314,8 @@ RunScript(script.extendedinfo,info=extendedinfo,imdb_id=IMDB_ID)
 Please have a look at reference implementation, too much to cover. Consider the following docs as outdated, needs some updating.
 
 #### List of Built In Controls for add-on dialogs :
- - MOVIES, TVSHOWS, SEASONS, EPISODES: script.extendedinfo-DialogVideoInfo.xml
- - ACTORS: script.extendedinfo-DialogInfo.xml
+ - MOVIES, TVSHOWS, SEASONS, EPISODES: script.UNCODED.extrainfo-DialogVideoInfo.xml
+ - ACTORS: script.UNCODED.extrainfo-DialogInfo.xml
 
 | IDS     | MOVIES    | TVSHOWS   | SEASONS   | EPISODES | ACTORS      |
 |---------|-----------|-----------|-----------|----------|-------------|
@@ -336,7 +336,7 @@ Please have a look at reference implementation, too much to cover. Consider the 
 | 1450    | ---       | Networks  | ---       | ---      | ---         |
 | 2000    | ---       | ---       | Episodes  | ---      | ---         |
 
-#### Labels Available In script.extendedinfo-DialogInfo.xml:
+#### Labels Available In script.UNCODED.extrainfo-DialogInfo.xml:
 
 Labels of the currently selected actor / director / writer / artist.
 - Window(home).Property(Title) ----------------------> Name
@@ -377,6 +377,6 @@ Labels of thumbs list
 
 [...](WIP)
 
-#### Labels Available In script.extendedinfo-DialogVideoInfo.xml:
+#### Labels Available In script.UNCODED.extrainfo-DialogVideoInfo.xml:
 
 [...](WIP)
