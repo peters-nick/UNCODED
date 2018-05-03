@@ -552,7 +552,7 @@
 <addon
 	id="script.UNCODED.extrainfo"
 	name="  [B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Extra Info[/COLOR][/I][/B]"
-	version="6.0.0~Beta1"
+	version="6.0.0~Beta2"
 	provider-name="UNCODED">
   <requires>
     <import addon="xbmc.python"                     version="2.19.0"/>
@@ -576,9 +576,9 @@
   <extension point="xbmc.addon.metadata">
     <language/>
     <summary lang="en">[B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Extra Info[/COLOR][/I][/B]</summary>
-    <description lang="en">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions. Uses [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] for playback and library functions.</description>
+    <description lang="en">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions. Uses [B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Meta[/COLOR][/I][/B]  for playback and library functions.</description>
     <summary lang="nl">[B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Extra Info[/COLOR][/I][/B]</summary>
-    <description lang="nl">Dit script biedt meerdere mogelijkheden om online content weer te geven in skins en bevat ook een complete MovieDB browser inclusief info dialogen voor verscheidene media types. Gebruikte diensten zijn themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com en nog veel meer. Vereist skin implementatie voor de meeste functies. Gebruikt [COLOR ff0084ff]M[/COLOR]etalli[COLOR ff0084ff]Q[/COLOR] voor afspeel en bibliotheek functies.</description>
+    <description lang="nl">Dit script biedt meerdere mogelijkheden om online content weer te geven in skins en bevat ook een complete MovieDB browser inclusief info dialogen voor verscheidene media types. Gebruikte diensten zijn themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com en nog veel meer. Vereist skin implementatie voor de meeste functies. Gebruikt [B][COLOR tan]UNCODED[/COLOR] [I][COLOR ghostwhite]Meta[/COLOR][/I][/B] voor afspeel en bibliotheek functies.</description>
     <platform>all</platform>
     <genre>movies,tv,trailers</genre>
     <video_guide>3nlzITuJizg</video_guide>
