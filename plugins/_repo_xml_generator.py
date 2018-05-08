@@ -115,12 +115,12 @@ class Generator:
 
 # clean and add closing tag
         addons_xml = addons_xml.strip() + u"\n</addons>\n"
-        self._save_file(addons_xml.encode( "utf-8" ), file=os.path.join('zips','uncoded.addons.xml'))
+        self._save_file(addons_xml.encode( "utf-8" ), file=os.path.join('zips','uncoded-addons.xml'))
 
     def _generate_md5_file(self):
         try:
-            m = md5.new(open(os.path.join('zips','uncoded.addons.xml')).read()).hexdigest()
-            self._save_file(m, file=os.path.join('zips','uncoded.addons.xml.md5'))
+            m = md5.new(open(os.path.join('zips','uncoded-addons.xml')).read()).hexdigest()
+            self._save_file(m, file=os.path.join('zips','uncoded-addons.xml.md5'))
         except Exception, e:
             print "An error occurred creating addons.xml.md5 file!\n%s" % (e)
 
