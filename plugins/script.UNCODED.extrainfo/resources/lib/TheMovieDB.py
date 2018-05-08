@@ -289,9 +289,9 @@ def handle_tmdb_movies(results=[], local_first=True, sortkey="year"):
         tmdb_id = str(fetch(movie, 'id'))
         artwork = get_image_urls(poster=movie.get("poster_path"),
                                  fanart=movie.get("backdrop_path"))
-        trailer = "plugin://script.extendedinfo/?info=playtrailer&id=" + tmdb_id
+        trailer = "plugin://script.UNCODED.extrainfo/?info=playtrailer&id=" + tmdb_id
         if SETTING("infodialog_onclick") != "false":
-            path = 'plugin://script.extendedinfo/?info=extendedinfo&id=%s' % tmdb_id
+            path = 'plugin://script.UNCODED.extrainfo/?info=UNCODED.extrainfo&id=%s' % tmdb_id
         else:
             path = trailer
         listitem = {'title': fetch(movie, 'title'),
@@ -351,11 +351,11 @@ def handle_tmdb_tvshows(results, local_first=True, sortkey="year"):
                  'Popularity': fetch(tv, 'popularity'),
                  'credit_id': fetch(tv, 'credit_id'),
                  'Plot': fetch(tv, "overview"),
-                 'Trailer': 'plugin://script.extendedinfo/?info=tvtrailer&id=%s' % tmdb_id, 
+                 'Trailer': 'plugin://script.UNCODED.extrainfo/?info=tvtrailer&id=%s' % tmdb_id, 
                  'year': get_year(fetch(tv, 'first_air_date')),
                  'media_type': "tv",
                  'character': fetch(tv, 'character'),
-                 'path': 'plugin://script.extendedinfo/?info=extendedtvinfo&id=%s' % tmdb_id,
+                 'path': 'plugin://script.UNCODED.extrainfo/?info=extendedtvinfo&id=%s' % tmdb_id,
                  'Rating': fetch(tv, 'vote_average'),
                  'User_Rating': str(fetch(tv, 'rating')),
                  'Votes': fetch(tv, 'vote_count'),
@@ -404,7 +404,7 @@ def handle_tmdb_misc(results):
                     'item_count': fetch(item, 'item_count'),
                     'favorite_count': fetch(item, 'favorite_count'),
                     'release_date': fetch(item, 'release_date'),
-                    'path': "plugin://script.extendedinfo?info=listmovies&---id=%s" % fetch(item, 'id'),
+                    'path': "plugin://script.UNCODED.extrainfo?info=listmovies&---id=%s" % fetch(item, 'id'),
                     'year': get_year(fetch(item, 'release_date')),
                     'iso_3166_1': fetch(item, 'iso_3166_1').lower(),
                     'author': fetch(item, 'author'),
@@ -491,7 +491,7 @@ def handle_tmdb_people(results):
                      'id': str(person['id']),
                      'cast_id': str(fetch(person, 'cast_id')),
                      'credit_id': str(fetch(person, 'credit_id')),
-                     'path': "plugin://script.extendedinfo/?info=extendedactorinfo&id=" + str(person['id']),
+                     'path': "plugin://script.UNCODED.extrainfo/?info=extendedactorinfo&id=" + str(person['id']),
                      'deathday': fetch(person, 'deathday'),
                      'place_of_birth': fetch(person, 'place_of_birth'),
                      'placeofbirth': fetch(person, 'place_of_birth'),
@@ -805,8 +805,8 @@ def extended_movie_info(movie_id=None, dbid=None, cache_time=14):
              'Adult': str(fetch(response, 'adult')),
              'Popularity': fetch(response, 'popularity'),
              'Status': translate_status(fetch(response, 'status')),
-             'path': "plugin://script.extendedinfo/?info=extendedinfo&id=%s" % movie_id,
-             'trailer': "plugin://script.extendedinfo/?info=playtrailer&id=%s" % movie_id,
+             'path': "plugin://script.UNCODED.extrainfo/?info=UNCODED.extrainfo&id=%s" % movie_id,
+             'trailer': "plugin://script.UNCODED.extrainfo/?info=playtrailer&id=%s" % movie_id,
              'release_date': fetch(response, 'release_date'),
              'Premiered': fetch(response, 'release_date'),
              'Studio': " / ".join(Studio),
@@ -907,8 +907,8 @@ def extended_tvshow_info(tvshow_id=None, cache_time=7, dbid=None):
               'User_Rating': str(fetch(response, 'rating')),
               'Votes': fetch(response, 'vote_count'),
               'Status': translate_status(fetch(response, 'status')),
-              'path': "plugin://script.extendedinfo/?info=extendedtvinfo&id=%s" % tvshow_id,
-              'trailer': "plugin://script.extendedinfo/?info=playtvtrailer&id=%s" % tvshow_id,
+              'path': "plugin://script.UNCODED.extrainfo/?info=extendedtvinfo&id=%s" % tvshow_id,
+              'trailer': "plugin://script.UNCODED.extrainfo/?info=playtvtrailer&id=%s" % tvshow_id,
               'ShowType': fetch(response, 'type'),
               'homepage': fetch(response, 'homepage'),
               'last_air_date': fetch(response, 'last_air_date'),
@@ -979,7 +979,7 @@ def extended_season_info(tvshow_id, season_number):
               'tvrage_id': tvrage_id,
               'year': year,
               'season': season_number,
-              'path': 'plugin://script.extendedinfo/?info=seasoninfo&tvshow=%s&season=%s' % (fetch(tvshow, 'name'), season_number), 
+              'path': 'plugin://script.UNCODED.extrainfo/?info=seasoninfo&tvshow=%s&season=%s' % (fetch(tvshow, 'name'), season_number), 
               'release_date': response["air_date"],
               'AirDate': response["air_date"]}
     artwork = get_image_urls(poster=response.get("poster_path"))
@@ -1040,7 +1040,7 @@ def extended_episode_info(tvshow_id, season, episode, cache_time=7):
               "show_id": tmdb_id,
               "tvdb_id": tvdb_id,
               "actors": actors,
-              "path": 'plugin://script.extendedinfo/?info=extendedepisodeinfo&tvshow_id=%s&season=%s&episode=%s' % (tvshow_id, season, episode),
+              "path": 'plugin://script.UNCODED.extrainfo/?info=extendedepisodeinfo&tvshow_id=%s&season=%s&episode=%s' % (tvshow_id, season, episode),
               "crew": crew,
               "guest_stars": guest_stars,
               "videos": videos,

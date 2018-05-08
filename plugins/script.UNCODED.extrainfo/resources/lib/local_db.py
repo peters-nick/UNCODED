@@ -134,11 +134,11 @@ def get_db_tvshows(filter_str="", limit=10):
 
 
 def handle_db_movies(movie):
-    trailer = "plugin://script.extendedinfo/?info=playtrailer&dbid=%s" % str(movie['movieid'])
+    trailer = "plugin://script.UNCODED.extrainfo/?info=playtrailer&dbid=%s" % str(movie['movieid'])
     if SETTING("infodialog_onclick") != "false":
-        path = 'plugin://script.extendedinfo/?info=extendedinfo&dbid=%s' % str(movie['movieid'])
+        path = 'plugin://script.UNCODED.extrainfo/?info=UNCODED.extrainfo&dbid=%s' % str(movie['movieid'])
     else:
-        path = 'plugin://script.extendedinfo/?info=playmovie&dbid=%i' % movie['movieid']
+        path = 'plugin://script.UNCODED.extrainfo/?info=playmovie&dbid=%i' % movie['movieid']
     if (movie['resume']['position'] and movie['resume']['total']) > 0:
         resume = "true"
         played = '%s' % int((float(movie['resume']['position']) / float(movie['resume']['total'])) * 100)
@@ -199,9 +199,9 @@ def handle_db_movies(movie):
 
 def handle_db_tvshows(tvshow):
     if SETTING("infodialog_onclick") != "false":
-        path = 'plugin://script.extendedinfo/?info=extendedtvinfo&dbid=%s' % str(tvshow['tvshowid'])
+        path = 'plugin://script.UNCODED.extrainfo/?info=extendedtvinfo&dbid=%s' % str(tvshow['tvshowid'])
     else:
-        path = 'plugin://script.extendedinfo/?info=action&id=ActivateWindow(videos,videodb://tvshows/titles/%s/,return)' % str(tvshow['tvshowid'])
+        path = 'plugin://script.UNCODED.extrainfo/?info=action&id=ActivateWindow(videos,videodb://tvshows/titles/%s/,return)' % str(tvshow['tvshowid'])
     db_tvshow = {'fanart': tvshow["art"].get('fanart', ""),
                  'fanart_small': tvshow["art"].get('fanart', ""),
                  'thumb': tvshow["art"].get('poster', ""),
@@ -412,7 +412,7 @@ def compare_album_with_library(online_list):
                                           params='{"properties": ["thumbnail"], "albumid":%s }' % str(local_item["albumid"]))
             album = json_response["result"]["albumdetails"]
             online_item["dbid"] = album["albumid"]
-            online_item["path"] = 'plugin://script.extendedinfo/?info=playalbum&dbid=%i' % album['albumid']
+            online_item["path"] = 'plugin://script.UNCODED.extrainfo/?info=playalbum&dbid=%i' % album['albumid']
             if album["thumbnail"]:
                 online_item.update({"thumb": album["thumbnail"]})
                 online_item.update({"Icon": album["thumbnail"]})

@@ -62,7 +62,7 @@ def handle_lastfm_events(results):
                  'lon': event['venue']['location']['geo:point']['geo:long'],
                  'artists': my_arts,
                  'googlemap': googlemap,
-                 'path': "plugin://script.extendedinfo/?info=action&id=" + builtin,
+                 'path': "plugin://script.UNCODED.extrainfo/?info=action&id=" + builtin,
                  'artist_image': event['image'][-1]['#text'],
                  'thumb': event['image'][-1]['#text'],
                  'venue_image': event['venue']['image'][-1]['#text'],

@@ -19,7 +19,7 @@ POSTERS = os.path.join(ADDON_DATA_PATH, "posters")
 def concatenate(posters=[], label=""):
     if posters == [] or label == "": return ""
     filename = os.path.join(POSTERS, "%s.jpg" % label)
-    specname = "special://profile/addon_data/script.extendedinfo/posters/%s.jpg" % label
+    specname = "special://profile/addon_data/script.UNCODED.extrainfo/posters/%s.jpg" % label
     if xbmcvfs.exists(filename): return specname
     img_width, img_height = 333, 500
     cimgs = []

@@ -420,8 +420,8 @@ def start_info_actions(infos, params):
                 else: return
         elif info == 'viewsimpleselector':
             if params.get("type"):
-                if params.get("type") == "movie": path = xbmc.translatePath("special://profile/addon_data/script.extendedinfo/simple_selector_movies.txt")
-                elif params.get("type") == "tv": path = xbmc.translatePath("special://profile/addon_data/script.extendedinfo/simple_selector_tvshows.txt")
+                if params.get("type") == "movie": path = xbmc.translatePath("special://profile/addon_data/script.UNCODED.extrainfo/simple_selector_movies.txt")
+                elif params.get("type") == "tv": path = xbmc.translatePath("special://profile/addon_data/script.UNCODED.extrainfo/simple_selector_tvshows.txt")
                 else: return
             if xbmcvfs.exists(path):
                 text = read_from_file(path, raw=True)
@@ -463,21 +463,21 @@ def start_info_actions(infos, params):
             if not dbid:
                 dbid = xbmc.getInfoLabel("ListItem.Property(dbid)")
             if xbmc.getCondVisibility("Container.Content(movies)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=extendedinfo,dbid=%s,id=%s)" % (dbid, xbmc.getInfoLabel("ListItem.Property(id)")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=UNCODED.extrainfo,dbid=%s,id=%s)" % (dbid, xbmc.getInfoLabel("ListItem.Property(id)")))
             elif xbmc.getCondVisibility("Container.Content(tvshows)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=extendedtvinfo,dbid=%s,id=%s)" % (dbid, xbmc.getInfoLabel("ListItem.Property(id)")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=extendedtvinfo,dbid=%s,id=%s)" % (dbid, xbmc.getInfoLabel("ListItem.Property(id)")))
             elif xbmc.getCondVisibility("Container.Content(seasons)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=seasoninfo,tvshow=%s,season=%s)" % (xbmc.getInfoLabel("ListItem.TVShowTitle"), xbmc.getInfoLabel("ListItem.Season")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=seasoninfo,tvshow=%s,season=%s)" % (xbmc.getInfoLabel("ListItem.TVShowTitle"), xbmc.getInfoLabel("ListItem.Season")))
             elif xbmc.getCondVisibility("Container.Content(actors) | Container.Content(directors)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=extendedactorinfo,name=%s)" % (xbmc.getInfoLabel("ListItem.Label")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=extendedactorinfo,name=%s)" % (xbmc.getInfoLabel("ListItem.Label")))
         elif info == "ratedialog":
             resolve_url(params.get("handle"))
             if xbmc.getCondVisibility("Container.Content(movies)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=ratemedia,type=movie,dbid=%s,id=%s)" % (xbmc.getInfoLabel("ListItem.DBID"), xbmc.getInfoLabel("ListItem.Property(id)")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=ratemedia,type=movie,dbid=%s,id=%s)" % (xbmc.getInfoLabel("ListItem.DBID"), xbmc.getInfoLabel("ListItem.Property(id)")))
             elif xbmc.getCondVisibility("Container.Content(tvshows)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=ratemedia,type=tv,dbid=%s,id=%s)" % (xbmc.getInfoLabel("ListItem.DBID"), xbmc.getInfoLabel("ListItem.Property(id)")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=ratemedia,type=tv,dbid=%s,id=%s)" % (xbmc.getInfoLabel("ListItem.DBID"), xbmc.getInfoLabel("ListItem.Property(id)")))
             elif xbmc.getCondVisibility("Container.Content(episodes)"):
-                xbmc.executebuiltin("RunScript(script.extendedinfo,info=ratemedia,type=episode,tvshow=%s,season=%s)" % (xbmc.getInfoLabel("ListItem.TVShowTitle"), xbmc.getInfoLabel("ListItem.Season")))
+                xbmc.executebuiltin("RunScript(script.UNCODED.extrainfo,info=ratemedia,type=episode,tvshow=%s,season=%s)" % (xbmc.getInfoLabel("ListItem.TVShowTitle"), xbmc.getInfoLabel("ListItem.Season")))
         elif info == 'youtubebrowser':
             resolve_url(params.get("handle"))
             wm.open_youtube_list(search_str=params.get("id", ""))
@@ -509,7 +509,7 @@ def start_info_actions(infos, params):
                             searchstring = dialog.input("ShowSearch")
                             xbmc.executebuiltin('Skin.SetString(ShowSearch,'+searchstring+')')
                         else:
-                            xbmc.executebuiltin("Notification(Please set a valid type,and try again, 5000, special://home/addons/script.extendedinfo/icon.png)")
+                            xbmc.executebuiltin("Notification(Please set a valid type,and try again, 5000, special://home/addons/script.UNCODED.extrainfo/icon.png)")
                             return
                     else:
                         searchstring = params.get("query", "")
@@ -544,13 +544,13 @@ def start_info_actions(infos, params):
                             xbmc.executebuiltin('Skin.SetString(TotalSearch,'+searchstring+')')
                             xbmc.executebuiltin('Container.Refresh')
                     if params.get("type", "") == "movie":
-                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=MovieSearch&mode=400&path=special://home/addons/script.extendedinfo/resources/extras/movie/)')
+                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=MovieSearch&mode=400&path=special://home/addons/script.UNCODED.extrainfo/resources/extras/movie/)')
                         xbmc.executebuiltin("Dialog.Close(all,true)")
                     elif params.get("type", "") == "tv":
-                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=ShowSearch&mode=400&path=special://home/addons/script.extendedinfo/resources/extras/tv/)')
+                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=ShowSearch&mode=400&path=special://home/addons/script.UNCODED.extrainfo/resources/extras/tv/)')
                         xbmc.executebuiltin("Dialog.Close(all,true)")
                     else:
-                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=TotalSearch&mode=400&path=special://home/addons/script.extendedinfo/resources/extras/total/)')
+                        xbmc.executebuiltin('ReplaceWindow(10025,plugin://plugin.program.super.favourites/?label=TotalSearch&mode=400&path=special://home/addons/script.UNCODED.extrainfo/resources/extras/total/)')
                         xbmc.executebuiltin("Dialog.Close(all,true)")
                 else:
                     wm.open_video_list(media_type=params.get("type", ""),
@@ -588,7 +588,7 @@ def start_info_actions(infos, params):
                 xbmc.executebuiltin('Skin.SetString(TotalSearch,'+totalsearch+')')
                 xbmc.executebuiltin('Container.Refresh')
             HOME.clearProperty('infodialogs.active')
-        elif info == 'extendedinfo':
+        elif info == 'UNCODED.extrainfo':
             resolve_url(params.get("handle"))
             HOME.setProperty('infodialogs.active', "true")
             name = re.sub("(\(.*?\))", "", params.get("name", ""))

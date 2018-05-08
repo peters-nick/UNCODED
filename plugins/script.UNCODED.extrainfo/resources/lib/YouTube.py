@@ -21,8 +21,8 @@ def handle_youtube_videos(results, extended=False):
             video_id = item["snippet"]["resourceId"]["videoId"]
         video = {'thumb': thumb,
                  'youtube_id': video_id,
-                 'Play': 'plugin://script.extendedinfo/?info=youtubevideo&id=%s' % video_id,
-                 'path': 'plugin://script.extendedinfo/?info=youtubevideo&id=%s' % video_id,
+                 'Play': 'plugin://script.UNCODED.extrainfo/?info=youtubevideo&id=%s' % video_id,
+                 'path': 'plugin://script.UNCODED.extrainfo/?info=youtubevideo&id=%s' % video_id,
                  'Description': item["snippet"]["description"],
                  'title': item["snippet"]["title"],
                  'channel_title': item["snippet"]["channelTitle"],
@@ -73,8 +73,8 @@ def handle_youtube_playlists(results):
             playlist_id = item["snippet"]["resourceId"]["playlistId"]
         playlist = {'thumb': thumb,
                     'youtube_id': playlist_id,
-                    'Play': 'plugin://script.extendedinfo/?info=youtubeplaylist&id=%s' % playlist_id,
-                    'path': 'plugin://script.extendedinfo/?info=youtubeplaylist&id=%s' % playlist_id,
+                    'Play': 'plugin://script.UNCODED.extrainfo/?info=youtubeplaylist&id=%s' % playlist_id,
+                    'path': 'plugin://script.UNCODED.extrainfo/?info=youtubeplaylist&id=%s' % playlist_id,
                     'title': item["snippet"]["title"],
                     'description': item["snippet"]["description"],
                     'channel_title': item["snippet"]["channelTitle"],
@@ -105,8 +105,8 @@ def handle_youtube_channels(results):
             channel_id = item["snippet"]["resourceId"]["channelId"]
         channel = {'thumb': thumb,
                    'youtube_id': channel_id,
-                   'Play': 'plugin://script.extendedinfo/?info=youtubechannel&id=%s' % channel_id,
-                   'path': 'plugin://script.extendedinfo/?info=youtubechannel&id=%s' % channel_id,
+                   'Play': 'plugin://script.UNCODED.extrainfo/?info=youtubechannel&id=%s' % channel_id,
+                   'path': 'plugin://script.UNCODED.extrainfo/?info=youtubechannel&id=%s' % channel_id,
                    'Description': item["snippet"]["description"],
                    'title': item["snippet"]["title"],
                    'Date': item["snippet"]["publishedAt"].replace("T", " ").replace(".000Z", "")[:-3]}

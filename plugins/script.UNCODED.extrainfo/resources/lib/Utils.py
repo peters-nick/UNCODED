@@ -37,7 +37,7 @@ FAVTHUMB = SETTING("fav_thumb")
 MOVIESORTS = ["popularity", "release_date", "revenue", "original_title", "vote_average", "vote_count"]
 TVSORTS = ["popularity", "first_air_date", "vote_average", "vote_count"]
 trailersearches = ["official trailer", "trailer", "teaser", "promo", "sneak preview", "intro", "opening credits"]
-METALLIQ = xbmcaddon.Addon("plugin.video.metalliq")
+UNCODED = xbmcaddon.Addon("video.UNCODED.meta")
 
 def after_add(type=False):
     basepath = os.path.join(ADDON_DATA_PATH, "TheMovieDB")
@@ -59,7 +59,7 @@ def get_status():
 
 def get_addons(type=None):
     if not get_status(): return []
-    path = xbmc.translatePath("special://profile/addon_data/script.extendedinfo/simple_selector_%s.txt" % type)
+    path = xbmc.translatePath("special://profile/addon_data/script.UNCODED.extrainfo/simple_selector_%s.txt" % type)
     if xbmcvfs.exists(path):
         addonstring = read_from_file(path, raw=True)
         addon_list = addonstring.rstrip("\n").split("\n")
@@ -69,7 +69,7 @@ def get_addons(type=None):
     else:
         addons = []
         ids = []
-        players_path = "special://profile/addon_data/plugin.video.metalliq/players/"
+        players_path = "special://profile/addon_data/video.UNCODED.meta/players/"
         files = [x for x in xbmcvfs.listdir(players_path)[1] if x.endswith(".json")]
         for file in files:
             path = xbmc.translatePath(os.path.join(players_path,file))
@@ -93,7 +93,7 @@ def get_addons(type=None):
                     addon.append(str(meta["id"]))
                     addons.append(addon)
                     ids.append(str(meta["id"]))
-                elif meta[type] and xbmc.getCondVisibility('System.HasAddon(%s)' % meta["plugin"]) and meta["plugin"] not in str(addons) and meta["plugin"] != 'plugin.video.metalliq' and meta["plugin"] != 'script.qlickplay' and meta["plugin"] != 'plugin.video.youtube' and meta["plugin"] != 'script.extendedinfo':
+                elif meta[type] and xbmc.getCondVisibility('System.HasAddon(%s)' % meta["plugin"]) and meta["plugin"] not in str(addons) and meta["plugin"] != 'video.UNCODED.meta' and meta["plugin"] != 'script.qlickplay' and meta["plugin"] != 'plugin.video.youtube' and meta["plugin"] != 'script.UNCODED.extrainfo':
                     addon = []
                     addon.append(str(meta["plugin"]))
                     addon.append(str(meta["id"]))
@@ -101,7 +101,7 @@ def get_addons(type=None):
                     ids.append(str(meta["id"]))
                 else: pass
             except: pass
-        file = xbmc.translatePath("special://profile/addon_data/script.extendedinfo/simple_selector_%s.txt" % type)
+        file = xbmc.translatePath("special://profile/addon_data/script.UNCODED.extrainfo/simple_selector_%s.txt" % type)
         addon_list = ""
         if addons != [] and len(addons) > 0:
             for addon in addons:
@@ -248,7 +248,7 @@ def get_google_autocomplete_items(search_str, youtube=False):
         else:
             search_str = item
         li = {"label": item,
-              "path": "plugin://script.extendedinfo/?info=selectautocomplete&id=%s" % search_str}
+              "path": "plugin://script.UNCODED.extrainfo/?info=selectautocomplete&id=%s" % search_str}
         listitems.append(li)
     return listitems
 
@@ -276,7 +276,7 @@ def get_common_words_autocomplete_items(search_str):
             if not line.startswith(search_str) or len(line) <= 2:
                 continue
             li = {"label": line,
-                  "path": "plugin://script.extendedinfo/?info=selectautocomplete&id=%s" % line}
+                  "path": "plugin://script.UNCODED.extrainfo/?info=selectautocomplete&id=%s" % line}
             listitems.append(li)
             if len(listitems) > 10:
                 break
@@ -335,7 +335,7 @@ def widget_selectdialog(filter=None, string_prefix="widget"):
     ret = xbmcgui.Dialog().select(LANG(32151), labels)
     if ret > -1:
         notify(keywords[ret])
-        xbmc.executebuiltin("Skin.SetString(%s.path,plugin://script.extendedinfo?info=%s)" % (string_prefix, keywords[ret]))
+        xbmc.executebuiltin("Skin.SetString(%s.path,plugin://script.UNCODED.extrainfo?info=%s)" % (string_prefix, keywords[ret]))
         xbmc.executebuiltin("Skin.SetString(%s.label,%s)" % (string_prefix, labels[ret]))
 
 
@@ -705,7 +705,7 @@ def get_favs():
                    'thumb': fav["thumbnail"],
                    'Type': fav["type"],
                    'Builtin': path,
-                   'path': "plugin://script.extendedinfo/?info=action&id=" + path}
+                   'path': "plugin://script.UNCODED.extrainfo/?info=action&id=" + path}
         items.append(newitem)
     return items
 
@@ -719,7 +719,7 @@ def get_icon_panel(number):
     for i in range(1, 6):
         infopanel_path = xbmc.getInfoLabel("Skin.String(IconPanelItem%i.Path)" % (i + offset))
         newitem = {'Label': xbmc.getInfoLabel("Skin.String(IconPanelItem%i.Label)" % (i + offset)).decode("utf-8"),
-                   'path': "plugin://script.extendedinfo/?info=action&id=" + infopanel_path.decode("utf-8"),
+                   'path': "plugin://script.UNCODED.extrainfo/?info=action&id=" + infopanel_path.decode("utf-8"),
                    'thumb': xbmc.getInfoLabel("Skin.String(IconPanelItem%i.Icon)" % (i + offset)).decode("utf-8"),
                    'id': "IconPanelitem%i" % (i + offset),
                    'Type': xbmc.getInfoLabel("Skin.String(IconPanelItem%i.Type)" % (i + offset)).decode("utf-8")}
@@ -731,7 +731,7 @@ def get_weather_images():
     items = []
     for i in range(1, 6):
         newitem = {'Label': "bla",
-                   'path': "plugin://script.extendedinfo/?info=action&id=SetFocus(22222)",
+                   'path': "plugin://script.UNCODED.extrainfo/?info=action&id=SetFocus(22222)",
                    'thumb': xbmc.getInfoLabel("Window(weather).Property(Map.%i.Area)" % i),
                    'Layer': xbmc.getInfoLabel("Window(weather).Property(Map.%i.Layer)" % i),
                    'Legend': xbmc.getInfoLabel("Window(weather).Property(Map.%i.Legend)" % i)}
@@ -795,7 +795,7 @@ def read_from_file(path="", raw=False):
 def convert_youtube_url(raw_string):
     youtube_id = extract_youtube_id(raw_string)
     if youtube_id:
-        return 'plugin://script.extendedinfo/?info=youtubevideo&id=%s' % youtube_id
+        return 'plugin://script.UNCODED.extrainfo/?info=youtubevideo&id=%s' % youtube_id
     return ""
 
 

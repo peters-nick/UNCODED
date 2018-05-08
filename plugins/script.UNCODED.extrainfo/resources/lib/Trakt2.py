@@ -47,7 +47,7 @@ def get_trakt_calendar_shows(content):
                     'imdb_id': episode["show"]["ids"]["imdb"],
                     'tmdb_id': episode["show"]["ids"]["tmdb"],
                     'trakt_id': episode["show"]["ids"]["trakt"],
-                    'path': 'plugin://script.extendedinfo/?info=extendedtvinfo&tvdb_id=%s' % episode["show"]["ids"]["tvdb"],
+                    'path': 'plugin://script.UNCODED.extrainfo/?info=extendedtvinfo&tvdb_id=%s' % episode["show"]["ids"]["tvdb"],
                     'Runtime': episode["show"]["runtime"] * 60,
                     'duration': episode["show"]["runtime"] * 60,
                     'duration(h)': format_time(episode["show"]["runtime"], "h"),
@@ -72,9 +72,9 @@ def handle_trakt_movies(results):
     movies = []
     for movie in results:
         if SETTING("infodialog_onclick") != "false":
-            path = 'plugin://script.extendedinfo/?info=extendedinfo&id=%s' % str(fetch(movie["movie"]["ids"], 'tmdb'))
+            path = 'plugin://script.UNCODED.extrainfo/?info=UNCODED.extrainfo&id=%s' % str(fetch(movie["movie"]["ids"], 'tmdb'))
         else:
-            path = "plugin://script.extendedinfo/?info=playtrailer&id=" + str(fetch(movie["movie"]["ids"], 'tmdb'))
+            path = "plugin://script.UNCODED.extrainfo/?info=playtrailer&id=" + str(fetch(movie["movie"]["ids"], 'tmdb'))
         movie = {'title': movie["movie"]["title"],
                  'Runtime': movie["movie"]["runtime"] * 60,
                  'duration': movie["movie"]["runtime"] * 60,
@@ -108,7 +108,7 @@ def handle_trakt_tvshows(results):
     shows = []
     for tvshow in results:
         airs = fetch(tvshow['show'], "airs")
-        path = 'plugin://script.extendedinfo/?info=extendedtvinfo&tvdb_id=%s' % tvshow['show']['ids']["tvdb"]
+        path = 'plugin://script.UNCODED.extrainfo/?info=extendedtvinfo&tvdb_id=%s' % tvshow['show']['ids']["tvdb"]
         show = {'title': tvshow['show']["title"],
                 'Label': tvshow['show']["title"],
                 'TVShowTitle': tvshow['show']["title"],
