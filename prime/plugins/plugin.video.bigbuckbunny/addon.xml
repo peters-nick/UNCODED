@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.bigbuckbunny" name="Big Buck Bunny" version="2.0.2" provider-name="KAOSbox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Test your device with the movie 'Big Buck Bunny'.</summary>
+    <description lang="en">Test your device with the movie 'Big Buck Bunny' which is available in several different sizes and formats.</description>
+    <summary lang="nl">Test je XBMC systeem met de film 'Big Buck Bunny'.</summary>
+    <description lang="nl">Test je XBMC systeem met de film 'Big Buck Bunny', deze is beschikbaar in diverse formaten en codecs.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
